@@ -1,4 +1,4 @@
-/* Basic Styles */
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -23,10 +23,23 @@ nav ul li a {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
+    transition: color 0.3s ease;
 }
 
-section {
-    padding: 20px;
+nav ul li a:hover {
+    color: #ff7e5f;
+}
+
+/* Fade-in Transition for Content */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
 /* Advertisement Section */
@@ -63,16 +76,6 @@ section {
     max-width: 50%;
 }
 
-.ad-banner h3 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.ad-banner p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
 .cta-button {
     background-color: #333;
     color: white;
@@ -87,13 +90,4 @@ section {
     background-color: #555;
 }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+/* Other styles remain the same */
